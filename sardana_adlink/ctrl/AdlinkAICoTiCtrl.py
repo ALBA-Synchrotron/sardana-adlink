@@ -215,7 +215,7 @@ class AdlinkAICoTiCtrl(CounterTimerController):
 
         if self._synchronization == AcqSynch.SoftwareTrigger:
             if value <= self._start_wait_time:
-                msg = 'integration time must be greater than %f'.format(
+                msg = 'integration time must be greater than {}'.format(
                       self._start_wait_time)
                 raise ValueError(msg)
             source = "SOFT"
