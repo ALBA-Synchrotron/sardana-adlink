@@ -215,8 +215,8 @@ class AdlinkAICoTiCtrl(CounterTimerController):
 
         if self._synchronization == AcqSynch.SoftwareTrigger:
             if value <= self._start_wait_time:
-                msg = 'It is not possible to integrate less than %r in ' \
-                      'software synchronization' % self._start_wait_time
+                msg = 'integration time must be greater than %f'.format(
+                      self._start_wait_time)
                 raise ValueError(msg)
             source = "SOFT"
             # TODO: To fix Sardana bug #594
