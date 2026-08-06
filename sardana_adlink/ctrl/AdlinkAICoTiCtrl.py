@@ -75,13 +75,13 @@ class AdlinkAICoTiCtrl(CounterTimerController):
                         Description: 'Standard deviation',
                         Access: DataAccess.ReadWrite
                         },
-                       "FORMULA":
+                       "Formula":
                        {Type: str,
                         Description: 'The formula to get the real value.\n '
                                      'e.g. "(VALUE/10)*1e-06"',
                         Access: DataAccess.ReadWrite
                         },
-                       "SHAREDFORMULA":
+                       "SharedFormula":
                        {Type: bool,
                         Description: 'If you want to share the same formula '
                                      'for all the channels set it to true"',
